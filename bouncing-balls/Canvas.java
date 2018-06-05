@@ -6,8 +6,9 @@ import java.awt.geom.*;
  * Class Canvas - a class to allow for simple graphical 
  * drawing on a canvas.
  * 
- * @author Michael Kölling (mik)
- * @author Bruce Quig
+ * @author Daan Lockhorst
+ * @author Justin Voitel 
+ * @author Ella katajisto
  *
  * @version 2016.02.29
  */
@@ -40,8 +41,27 @@ public class Canvas
     public Canvas(String title, int width, int height, boolean leave_trace)
     {
         this(title, width, height, Color.white, leave_trace);
+        Dimension size = new Dimension(width, height);
+        
     }
-
+    /**
+     * Get the width of the canvas
+     * @return double width of the canvas
+     */
+    public double getWidth()
+    {
+        return canvas.getWidth();
+    }
+    /**
+     * Get the height of the canvas
+     * @return double height of the canvas
+     */
+    public double getHeight()
+    {
+        return canvas.getHeight();
+    }
+    
+    
     /**
      * Create a Canvas.
      * @param title  title to appear in Canvas Frame

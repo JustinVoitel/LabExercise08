@@ -9,11 +9,11 @@ import java.awt.geom.*;
  *
  * This movement can be initiated by repeated calls to the "move" method.
  * 
- * @author Michael Kölling (mik)
- * @author David J. Barnes
- * @author Bruce Quig
+ * @author Daan Lockhorst   
+ * @author Justin Voitel 
+ * @author Ella katajisto
  *
- * @version 2016.02.29
+ * @version 05.07.2018
  */
 
 public class BouncingBall
@@ -28,7 +28,8 @@ public class BouncingBall
     private int yPosition;
     private final int groundPosition;      // y position of ground
     private Canvas canvas;
-    private int ySpeed = 1;                // initial downward speed
+    private int ySpeed = 1;  
+    private boolean s = true;// initial downward speed
 
     /**
      * Constructor for objects of class BouncingBall
@@ -49,6 +50,10 @@ public class BouncingBall
         diameter = ballDiameter;
         groundPosition = groundPos;
         canvas = drawingCanvas;
+    }
+    public void setdiameter(int dia)
+    {
+        diameter = dia;
     }
 
     /**
@@ -71,6 +76,7 @@ public class BouncingBall
     /**
      * Move this ball according to its position and speed and redraw.
      **/
+    
     public void move()
     {
         // remove from canvas at the current position
@@ -80,6 +86,22 @@ public class BouncingBall
         ySpeed += GRAVITY;
         yPosition += ySpeed;
         xPosition +=2;
+        
+        // eddits the diameter between 150/10
+        if (s){
+            diameter ++;
+        }
+        if (!s){
+            diameter -= 2;
+        }
+        if(diameter > 150){
+            s = false;
+        }
+        if(diameter < 10){
+            s = true;
+        }
+    
+        
 
         // check if it has hit the ground
         if (yPosition >= (groundPosition - diameter) && ySpeed > 0) {

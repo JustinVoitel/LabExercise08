@@ -1,10 +1,19 @@
 #BlueJ class context
 comment0.target=BallDemo
-comment0.text=\n\ Class\ BallDemo\ -\ a\ short\ demonstration\ showing\ animation\ with\ the\ \n\ Canvas\ class.\ \n\n\ @author\ Michael\ K\u00F6lling\ and\ David\ J.\ Barnes\n\ @version\ 2016.02.29\n
+comment0.text=\n\ Class\ BallDemo\ -\ a\ short\ demonstration\ showing\ animation\ with\ the\ \n\ Canvas\ class.\ \n\n\ @author\ Daan\ Lockhorst,\ Justin\ Voitel\ and\ Ella\ katajisto\n\ @version\ 05.07.2018\n
 comment1.params=
 comment1.target=BallDemo()
 comment1.text=\n\ Create\ a\ BallDemo\ object.\ Creates\ a\ fresh\ canvas\ and\ makes\ it\ visible.\n
 comment2.params=
-comment2.target=void\ bounce()
+comment2.target=void\ drawGround()
 comment2.text=\n\ Simulate\ two\ bouncing\ balls\n
-numComments=3
+comment3.params=
+comment3.target=void\ drawStuff()
+comment3.text=\n\ Draw\ some\ modern\ "art"\ on\ the\ screen,\ So\ much\ emotion\n
+comment4.params=distance\ thickness
+comment4.target=void\ drawFrame(int,\ int)
+comment4.text=\n\ Draw\ a\ rectangle\ frame\ a\ nr\ of\ pixles\ from\ the\ edge\ you\ can\ also\ choose\ the\ thickness\ \n\ @param\ int\ distance\ for\ the\ distance\ to\ the\ frames\ edge\n\ @param\ int\ thickness\ for\ the\ thickness\ of\ the\ line\n
+comment5.params=n
+comment5.target=void\ bounce(int)
+comment5.text=\n\ Draw\ a\ rectangle\ frame\ a\ nr\ of\ pixles\ from\ the\ edge\ you\ can\ also\ choose\ the\ thickness\ \n\ @param\ int\ n\ for\ the\ number\ of\ BounceingBalls\ created\n
+numComments=6
