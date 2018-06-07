@@ -40,8 +40,18 @@ public class Canvas
     public Canvas(String title, int width, int height, boolean leave_trace)
     {
         this(title, width, height, Color.white, leave_trace);
+        Dimension size = new Dimension(width,height);
+        System.out.print("width: "+ size.getWidth());
     }
-
+    
+    public double getWidth(){
+        return canvas.getWidth();
+    }
+    
+    public double getHeight(){
+        return canvas.getHeight();
+    }
+    
     /**
      * Create a Canvas.
      * @param title  title to appear in Canvas Frame
@@ -258,7 +268,7 @@ public class Canvas
      */
     public void drawLine(int x1, int y1, int x2, int y2)
     {
-        graphic.drawLine(x1, y1, x2, y2);   
+        graphic.drawLine(x1, y1, x2, y2);
         canvas.repaint();
     }
 
