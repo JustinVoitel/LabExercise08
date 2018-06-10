@@ -40,8 +40,6 @@ public class Canvas
     public Canvas(String title, int width, int height, boolean leave_trace)
     {
         this(title, width, height, Color.white, leave_trace);
-        Dimension size = new Dimension(width,height);
-        System.out.print("width: "+ size.getWidth());
     }
     
     public double getWidth(){
