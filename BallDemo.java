@@ -100,8 +100,8 @@ public class BallDemo
     
     /**
      * Add n Balls to a ArrayList with random specifications
-     * @param int distance for the distance to the frames edge
-     * @param int thickness for the thickness of the line
+     * @param n number of balls that should be created
+     * 
      */
     public void createBalls(int n){        
         for(int i = 0; i < n; i ++){
@@ -109,15 +109,20 @@ public class BallDemo
             float red = r.nextFloat();
             float green = r.nextFloat();
             float blue = r.nextFloat();
+            double topHalfDbl = this.width * 0.5;
+            int topHalf = (int)topHalfDbl;
             Color randomColor = new Color(red, green, blue);
-            ballz.add(new BouncingBall(r.nextInt(this.width), r.nextInt(100),
-                r.nextInt(100), randomColor, ground, myCanvas));
+            ballz.add(new BouncingBall(
+                r.nextInt(this.width),
+                r.nextInt(topHalf),
+                r.nextInt(100), 
+                randomColor, ground, myCanvas));
                 ballz.get(i).draw();
         }
     }
     
     /**
-     * Draw a rectangle frame a nr of pixles from the edge you can also choose the thickness 
+     * Make the balls bounce 
      * @param int n for the number of BounceingBalls created
      */
     public void bounce(int n){
